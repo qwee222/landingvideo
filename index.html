@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Completo - Landing</title>
+<style>
+       /* Estilos generales y reseteo */
+       body {
+           /* Usamos Arial, un tipo de letra estándar, para evitar "letras raras" */
+           font-family: Arial, sans-serif;
+           margin: 0;
+           /* Añadimos padding vertical para que no se pegue a los bordes */
+           padding: 20px 0;
+           background-color: #f0f0f0; /* Fondo gris claro */
+           /* Alineación de bloque centrada (fallback) */
+           text-align: center;
+       }
+       /* Contenedor principal para centrar el contenido */
+       .container {
+           width: 90%; /* Ocupa el 90% del ancho en móviles */
+           max-width: 400px; /* Ancho máximo en escritorio */
+           /* FIX DE CENTRADO: Esto asegura que el contenedor esté centrado */
+           margin: 0 auto;
+           background-color: #ffffff;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           border-radius: 8px;
+           overflow: hidden;
+           text-align: center;
+       }
+       /* Sección superior con título */
+       .header {
+           padding: 30px 20px 20px 20px;
+           background-color: #f7f7f7;
+           border-bottom: 1px solid #eee;
+       }
+       .header h1 {
+           font-size: 24px;
+           color: #333333;
+           margin: 0 0 5px 0;
+           font-weight: bold;
+           line-height: 1.2;
+       }
+       .header .quality {
+           font-size: 10px;
+           color: #ffffff;
+           background-color: #4CAF50;
+           padding: 2px 5px;
+           border-radius: 3px;
+           font-weight: bold;
+           display: inline-block;
+           margin-right: 5px;
+       }
+       .header p {
+           font-size: 16px;
+           color: #666666;
+           margin: 10px 0 0 0;
+       }
+       /* Botón de la sección superior (Rojo) */
+       .header a.button {
+           display: inline-block;
+           margin-top: 20px;
+           padding: 12px 25px;
+           background-color: #FF0000; /* Rojo */
+           color: #ffffff;
+           text-decoration: none;
+           border-radius: 6px;
+           font-weight: bold;
+           font-size: 16px;
+           transition: background-color 0.3s;
+       }
+       .header a.button:hover {
+           background-color: #CC0000;
+       }
+       /* Sección del video/GIF */
+       .video-section {
+           padding: 20px;
+           text-align: left;
+       }
+       .video-meta {
+           margin-bottom: 10px;
+           font-size: 14px;
+           color: #555;
+           display: flex;
+           align-items: center;
+       }
+       .video-meta img {
+           width: 20px;
+           height: 20px;
+           margin-right: 5px;
+           border-radius: 50%;
+       }
+       /* Área del Video/GIF - Importante para la Responsividad */
+       .video-player {
+           position: relative;
+           /* FIX DE VIDEO: Asegura que el padding-bottom funcione para la relación de aspecto */
+           display: block;
+           width: 100%;
+           padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+           background-color: #000;
+           border-radius: 4px;
+           overflow: hidden;
+           cursor: pointer;
+       }
+       .video-player img.gif {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           display: block;
+       }
+       /* Ícono de Play superpuesto */
+       .play-icon {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           width: 60px;
+           height: 60px;
+           background-color: rgba(0, 0, 0, 0.6);
+           border-radius: 50%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           z-index: 10; /* Asegura que esté por encima del GIF */
+       }
+       .play-icon svg {
+           fill: #ffffff;
+           width: 25px;
+           height: 25px;
+           margin-left: 3px;
+       }
+       /* Barra de progreso simulada */
+       .progress-bar {
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           height: 5px;
+           background-color: rgba(255, 255, 255, 0.4);
+           z-index: 10;
+       }
+       .progress-bar-fill {
+           width: 70%;
+           height: 100%;
+           background-color: #FF0000;
+       }
+       /* Estilos para móviles (full width) */
+       @media (max-width: 450px) {
+           body {
+               padding-top: 0;
+           }
+           .container {
+               /* Quitamos bordes y sombras para que ocupe toda la pantalla del móvil */
+               border-radius: 0;
+               box-shadow: none;
+           }
+       }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<p class="quality">4K ULTRA HD</p>
+<h1>VIDEO MP4 COMPLETO</h1>
+<p>todos los videos filtrados.</p>
+<a href="https://google.com" target="_blank" class="button">Mas videos filtrados</a>
+</div>
+<div class="video-section">
+<div class="video-meta">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Avatar"> <span>Twitter Views 124,495</span>
+</div>
+<a href="https://google.com" target="_blank" class="video-player">
+<img src="https://i.imgur.com/QHVYxOl.gif" alt="Contenido de video" class="gif">
+<div class="play-icon">
+<svg viewBox="0 0 24 24">
+<path d="M8 5v14l11-7z"/>
+</svg>
+</div>
+<div class="progress-bar">
+<div class="progress-bar-fill"></div>
+</div>
+</a>
+</div>
+</div>
+</body>
+</html>
