@@ -5,98 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video Completo - Landing</title>
 <style>
-       /* Estilos CSS (Sin cambios mayores, solo para referencia) */
-       body {
-           font-family: Arial, sans-serif;
-           margin: 0;
-           padding: 20px 0;
-           background-color: #f0f0f0;
-           text-align: center;
-       }
-       .container {
-           width: 90%;
-           max-width: 400px;
-           margin: 0 auto;
-           background-color: #ffffff;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-           border-radius: 8px;
-           overflow: hidden;
-           text-align: center;
-       }
-       .header {
-           padding: 30px 20px 20px 20px;
-           background-color: #f7f7f7;
-           border-bottom: 1px solid #eee;
-       }
-       .header h1 {
-           font-size: 24px;
-           color: #333333;
-           margin: 0 0 5px 0;
-           font-weight: bold;
-           line-height: 1.2;
-       }
-       .header .quality {
-           font-size: 10px;
-           color: #ffffff;
-           background-color: #4CAF50;
-           padding: 2px 5px;
-           border-radius: 3px;
-           font-weight: bold;
-           display: inline-block;
-           margin-right: 5px;
-       }
-       /* Botón de la sección superior (Rojo) */
-       .header a.button {
-           display: inline-block;
-           margin-top: 20px;
-           padding: 12px 25px;
-           background-color: #FF0000;
-           color: #ffffff;
-           text-decoration: none;
-           border-radius: 6px;
-           font-weight: bold;
-           font-size: 16px;
-           transition: background-color 0.3s;
-       }
-       .header a.button:hover {
-           background-color: #CC0000;
-       }
-       .video-section {
-           padding: 20px;
-           text-align: left;
-       }
-       .video-player {
-           position: relative;
-           display: block;
-           width: 100%;
-           padding-bottom: 56.25%;
-           background-color: #000;
-           border-radius: 4px;
-           overflow: hidden;
-           cursor: pointer;
-       }
-       .video-player img.gif {
-           position: absolute;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           display: block;
-       }
-       /* Iconografía (Play, Progreso, etc.) */
-       .play-icon {
-           position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-           width: 60px; height: 60px; background-color: rgba(0, 0, 0, 0.6);
-           border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 10;
-       }
+       /* [ ... MANTENEMOS TODO EL CSS ANTERIOR AQUÍ ... ] */
+       body { font-family: Arial, sans-serif; margin: 0; padding: 20px 0; background-color: #f0f0f0; text-align: center; }
+       .container { width: 90%; max-width: 400px; margin: 0 auto; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; text-align: center; }
+       .header { padding: 30px 20px 20px 20px; background-color: #f7f7f7; border-bottom: 1px solid #eee; }
+       .header h1 { font-size: 24px; color: #333333; margin: 0 0 5px 0; font-weight: bold; line-height: 1.2; }
+       .header .quality { font-size: 10px; color: #ffffff; background-color: #4CAF50; padding: 2px 5px; border-radius: 3px; font-weight: bold; display: inline-block; margin-right: 5px; }
+       .header a.button { display: inline-block; margin-top: 20px; padding: 12px 25px; background-color: #FF0000; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; transition: background-color 0.3s; }
+       .header a.button:hover { background-color: #CC0000; }
+       .video-section { padding: 20px; text-align: left; }
+       .video-player { position: relative; display: block; width: 100%; padding-bottom: 56.25%; background-color: #000; border-radius: 4px; overflow: hidden; cursor: pointer; }
+       .video-player img.gif { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+       .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background-color: rgba(0, 0, 0, 0.6); border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 10; }
        .play-icon svg { fill: #ffffff; width: 25px; height: 25px; margin-left: 3px; }
        .progress-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 5px; background-color: rgba(255, 255, 255, 0.4); z-index: 10; }
        .progress-bar-fill { width: 70%; height: 100%; background-color: #FF0000; }
-       @media (max-width: 450px) {
-           body { padding-top: 0; }
-           .container { border-radius: 0; box-shadow: none; }
-       }
+       @media (max-width: 450px) { body { padding-top: 0; } .container { border-radius: 0; box-shadow: none; } }
 </style>
 </head>
 <body>
@@ -105,14 +29,14 @@
 <p class="quality">4K ULTRA HD</p>
 <h1>VIDEO MP4 COMPLETO</h1>
 <p>todos los videos filtrados.</p>
-<a href="#" class="button" onclick="redirectToCPA(event)">Mas videos filtrados</a>
+<a href="#" class="button" onclick="rotateAndRedirect(event)">Mas videos filtrados</a>
 </div>
 <div class="video-section">
 <div class="video-meta">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Avatar">
 <span>Twitter Views 124,495</span>
 </div>
-<a href="#" class="video-player" onclick="redirectToCPA(event)">
+<a href="#" class="video-player" onclick="rotateAndRedirect(event)">
 <img src="https://i.imgur.com/QHVYxOl.gif" alt="Contenido de video" class="gif">
 <div class="play-icon">
 <svg viewBox="0 0 24 24">
@@ -126,18 +50,26 @@
 </div>
 </div>
 <script>
-       // Función que se llama con cada clic
-       function redirectToCPA(event) {
-           // Previene el comportamiento por defecto del enlace (que iría a #)
+       // URL de destino que SIEMPRE será la misma
+       const FINAL_CPA_URL = 'https://Cpa.com';
+       // Función que rota la URL de la landing y luego redirige
+       function rotateAndRedirect(event) {
+           // 1. Evitar la navegación normal del enlace
            event.preventDefault();
-           // 1. Generar un número aleatorio (usaremos una marca de tiempo más un número pequeño
-           //    para mayor unicidad, si es necesario, si no, solo el aleatorio es suficiente)
-           var randomNumber = Math.floor(Math.random() * 1000000000);
-           // 2. Construir la URL de destino con el parámetro dinámico
-           // Usaremos 'clickid' o 'cid' como parámetro para el tracking, seguido del número aleatorio
-           var finalURL = 'https://Cpa.com/?cid=' + randomNumber;
-           // 3. Redirigir al usuario a la URL con el valor aleatorio único
-           window.location.href = finalURL;
+           // 2. Generar un número aleatorio para usarlo como 'nuevo index'
+           var randomNumber = Math.floor(Math.random() * 1000000);
+           // 3. Crear una nueva URL para la landing con un parámetro de rotación
+           // Ejemplo: /index.html?v=123456 (Si la estás ejecutando localmente o en un dominio)
+           // Esto cambia la URL que ve el usuario, simulando que ha cargado otra página
+           var newLandingPath = window.location.pathname + '?v=' + randomNumber;
+           // 4. USAR history.pushState para modificar la URL de la barra de direcciones
+           // Esto cambia la URL VISIBLE sin recargar la página, logrando el efecto de "rotación".
+           window.history.pushState(null, '', newLandingPath);
+           // 5. Redirigir al usuario a la URL de CPA (que es constante)
+           // Se utiliza un pequeño retraso (50ms) para asegurar que el cambio de history sea reconocido antes de la redirección
+           setTimeout(function() {
+               window.location.href = FINAL_CPA_URL;
+           }, 50);
        }
 </script>
 </body>
